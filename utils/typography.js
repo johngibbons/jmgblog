@@ -3,29 +3,18 @@ import React from 'react'
 import Typography from 'typography'
 import { GoogleFont } from 'react-typography'
 import CodePlugin from 'typography-plugin-code'
+import githubTheme from 'typography-theme-github'
 
-const options = {
-  googleFonts: [
-    {
-      name: 'Roboto',
-      styles: [
-        '400',
-        '400i',        
-        '700'
-      ]
-    }
-  ],
-  headerFontFamily: ['Roboto', 'sans-serif'],
-  bodyFontFamily: ['Roboto', 'sans-serif'],
-  baseFontSize: '18px',
-  baseLineHeight: 1.65,
-  scale: 2.25,
+githubTheme.overrideThemeStyles = () => ({
+  a: {
+    color: '#74b546'
+  },
   plugins: [
-    new CodePlugin(),
-  ],
-}
+    new CodePlugin()
+  ]
+})
 
-const typography = new Typography(options)
+const typography = new Typography(githubTheme)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {

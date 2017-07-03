@@ -1,2 +1,3 @@
-siteTitle="Gatsby Starter Site"
-linkPrefix = "/gatsby-starter-default"
+siteTitle="The Notorious G.I.B."
+authorName="John Gibbons"
+linkPrefix = "/notorious"

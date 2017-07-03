@@ -1,0 +1,10 @@
+.bio {
+  float: left;
+  max-width: 50%;
+  margin-right: 2rem;
+}
+
+.aboutPhoto {
+  float: right;
+  max-width: calc(50% - 2rem);
+}

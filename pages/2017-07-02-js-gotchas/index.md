@@ -10,6 +10,8 @@ tags:
   - Software
 ---
 
+<iframe src="https://giphy.com/embed/GbPru204dTDfG" width="276" height="210" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
 This is mostly a list for myself of some of the more quirky examples I've seen
 for odd JavaScript behavior along with explanations of why the engine behaves
 the way it does.
@@ -116,6 +118,8 @@ Arrays are converted to strings when combined using the `+` operator.  Empty
 arrays are coerced into empty strings `''`, and arrays of strings or numbers are
 coerced into the form `'f, o, o'`.  The result of this expression will therefore
 be the string `'f, o, o'`.
+
+<iframe src="https://giphy.com/embed/vpxsRkXfO7KDe" width="480" height="260" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 ---
 

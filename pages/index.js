@@ -6,7 +6,6 @@ import { config } from 'config'
 import sortBy from 'lodash/sortBy'
 import get from 'lodash/get'
 import include from 'underscore.string/include'
-import { rhythm } from '../utils/typography'
 import styles from '../css/index.module.css'
 
 export default ({
@@ -17,6 +16,7 @@ export default ({
     (get(page, 'file.ext') === 'md' && !include(page.path, '/404')) ||
       get(page, 'data.date')
   ))
+  console.log(route.pages)
 
   return (
     <div>
@@ -27,22 +27,23 @@ export default ({
             {'name': 'keywords', 'content': 'software, engineering, blog, personal, gibbons, front end, javascript'}
         ]}
         />
-      <h1>
-        The blog of John Gibbons
-      </h1>
-      <p>Hey there!  My name is John Gibbons, and this is my personal blog, where I discuss mostly software engineering, and in particular all things related to front end web development.  I'm a big lover of all things web and especially JavaScript.</p>
       <ul className={styles.pageLinksList}>
         {visiblePages.map((page) => (
-          <li
+          <div
             key={page.path}
-            style={{
-              marginBottom: rhythm(1 / 4)
-            }}
+            className={styles.post}
           >
-            <Link style={{boxShadow: 'none'}} to={prefixLink(page.path)}>
-              {get(page, 'data.title', page.path)}
+            <Link
+              className={styles.titleLink}
+              to={prefixLink(page.path)}
+            >
+              <h1 className={styles.title}>{get(page, 'data.title', page.path)}</h1>
             </Link>
-          </li>
+            <div
+              key={page.path}
+              dangerouslySetInnerHTML={{__html: page.data.body}}
+            />
+          </div>
         ))}
       </ul>
     </div>

@@ -1,3 +1,7 @@
 .pageLinksList {
   list-style-type: none;
 }
+
+.titleLink:hover {
+  text-decoration: none;
+}

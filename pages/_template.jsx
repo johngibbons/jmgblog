@@ -2,8 +2,8 @@ import React from 'react'
 import { Container } from 'react-responsive-grid'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
-import Headroom from 'react-headroom'
 import '../css/markdown-styles'
+import '../css/global'
 import styles from '../css/template.module.css'
 import { rhythm } from '../utils/typography'
 
@@ -16,12 +16,9 @@ module.exports = React.createClass({
   render () {
     return (
       <div>
-        <Headroom
-          wrapperStyle={{
-            marginBottom: rhythm(1)
-          }}
-        >
+        <div >
           <Container
+            className={styles.container}
             style={{
               maxWidth: 960,
               paddingTop: 0,
@@ -41,10 +38,16 @@ module.exports = React.createClass({
                 className={styles.headerAvatar}
                 src={prefixLink('/john_150px.jpg')}
               />
-              <span>The Notorious G.I.B.</span>
+              <div className={styles.textContainer}>
+                <h1 className={styles.title}>The Notorious G.I.B.</h1>
+                <h2 className={styles.subtitle}>thoughts on software and other stuff</h2>
+              </div>
             </Link>
+            <div className={styles.links}>
+              <Link to={prefixLink('/about/')} >About</Link>
+            </div>
           </Container>
-        </Headroom>
+        </div>
         <Container
           style={{
             maxWidth: 960,

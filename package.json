@@ -28,7 +28,9 @@
     "underscore.string": "^3.3.4"
   },
   "devDependencies": {
-    "gh-pages": "^0.11.0"
+    "gh-pages": "^0.11.0",
+    "prettier-standard": "^6.0.0",
+    "standard": "^10.0.3"
   },
   "keywords": [
     "gatsby"

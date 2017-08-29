@@ -16,7 +16,7 @@ module.exports = React.createClass({
   render () {
     return (
       <div>
-        <div >
+        <header>
           <Container
             className={styles.container}
             style={{
@@ -38,16 +38,16 @@ module.exports = React.createClass({
                 className={styles.headerAvatar}
                 src={prefixLink('/john_150px.jpg')}
               />
-              <div className={styles.textContainer}>
+              <hgroup className={styles.textContainer}>
                 <h1 className={styles.title}>The Notorious G.I.B.</h1>
                 <h2 className={styles.subtitle}>thoughts on software and other stuff</h2>
-              </div>
+              </hgroup>
             </Link>
-            <div className={styles.links}>
+            <nav className={styles.links}>
               <Link to={prefixLink('/about/')} >About</Link>
-            </div>
+            </nav>
           </Container>
-        </div>
+        </header>
         <Container
           style={{
             maxWidth: 960,

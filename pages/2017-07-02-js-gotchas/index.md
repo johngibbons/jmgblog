@@ -109,15 +109,15 @@ returns `1`.
 #### Answer:
 
 ```
-'f, o, o'
+'f,o,o'
 ```
 
 #### Explanation:
 
 Arrays are converted to strings when combined using the `+` operator.  Empty
 arrays are coerced into empty strings `''`, and arrays of strings or numbers are
-coerced into the form `'f, o, o'`.  The result of this expression will therefore
-be the string `'f, o, o'`.
+coerced into the form `'f,o,o'`.  The result of this expression will therefore
+be the string `'f,o,o'`.
 
 <iframe src="https://giphy.com/embed/vpxsRkXfO7KDe" width="480" height="260" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
